@@ -1,0 +1,47 @@
+<html>
+	<title>
+		MEMBUAT MENU TAB
+	</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/w3.css">
+	<body>
+	<div class="w3-container w3-blue w3-center">
+	<img src="css/unikom.jpg" style="width:100% height:80%">
+	</div>
+		<div class="w3-bar w3-black">
+			<button class="w3-bar-item w3-button" onclick="openFoto('Kampus')">Kampus</button>
+			<button class="w3-bar-item w3-button" onclick="openFoto('UnikomMart')">UnikomMart</button>
+			<button class="w3-bar-item w3-button" onclick="openFoto('Mobil')">Mobil</button>
+			<button class="w3-bar-item w3-button" onclick="openFoto('Foto')">Foto</button>
+		</div>
+		<div id="Kampus" class="w3-container foto w3-animate-fading w3-dark-gray" style="display:none">
+			<h2><b>UNIKOM</h2>
+			<img src="css/Gedung_Smart_Building_UNIKOM.jpg" style="width:40%"> 
+		</div>
+		<div id="UnikomMart" class="w3-container foto w3-animate-bottom w3-gray" style="display:none">
+			<h2><b>UnikomMart</h2>
+			<img src="css/UnikomMart.png" style="width:40%"> 
+		</div>
+		<div id="Mobil" class="w3-container foto w3-animate-top w3-dark-gray" style="display:none">
+			<h2><b>Lamborghini Veneno Roadster</h2>
+			<img src="css/Lamborghini.jpg" style="width:40%"> 
+		</div>
+		<div id="Foto" class="w3-container foto w3-animate-zoom w3-gray" style="display:none">
+			<h2><b>Cristiano Ronaldo</h2>
+			<img src="css/CR7.jpg" style="width:40%"> 
+		</div>
+		<br>
+		<script>
+		function openFoto(namafoto) 
+		{
+			var i;
+			var x = document.getElementsByClassName("foto");
+			for (i = 0; i < x.length; i++) 
+			{
+				x[i].style.display = "none";
+			}
+			document.getElementById(namafoto).style.display = "block";
+		}
+		</script>
+	</body>
+</html>
